@@ -47,7 +47,7 @@ function dateConvert
 	after=$(date -d "$backupDate -1 day" | awk '{print $6"-"$2"-"$3}')
 	before=$(date -d "$backupDate +1 day" | awk '{print $6"-"$2"-"$3}')
 	name=$(date -d "$backupDate +1 day" | awk '{print $2}')
-	arr="JAN F Mar Apr May Jun Jul Aug Sep Oct Nov Dec"
+	arr="JAN Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec"
 
     for X in $arr
     do
