@@ -117,6 +117,8 @@ do
 	esac
 done
 
+# Remove all temporary files created to store data during script execution
+
 rm proxycp-output.txt
 rm proxycp-output-modify.txt
 rm temp.txt
