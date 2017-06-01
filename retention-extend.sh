@@ -79,8 +79,8 @@ do
 	case $choice in
         1)	# Choice for display retention
             read -p "Enter your client name: " cName
-            read -p "After which date would you like to list the backups (YY-MM-DD): " afterDate
-            read -p "And before Which Date would you like to list the backups (YY-MM-DD): " beforeDate
+            read -p "After which date would you like to list the backups (YYYY-MM-DD): " afterDate
+            read -p "And before Which Date would you like to list the backups (YYYY-MM-DD): " beforeDate
 
             java -jar proxycp.jar --listbackups --client /$vCenterName/VirtualMachines/$cName --after "$afterDate" --before "$beforeDate" &> /root/proxycp-output.txt
             awk '/Operation/{y=1;next}y' proxycp-output.txt |grep / | awk '{print $2 "\t""\t"$3 "\t" $5}' > temp.txt
