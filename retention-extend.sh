@@ -116,3 +116,10 @@ do
         ;;
 	esac
 done
+
+rm proxycp-output.txt
+rm proxycp-output-modify.txt
+rm temp.txt
+rm temp_2.txt
+
+
